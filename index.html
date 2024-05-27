@@ -40,23 +40,23 @@
                 <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
                 <div class="mb-3">
                     <label for="Nome" class="form-label">Nome</label>
-                    <input type="text" name="Nome" class="form-control" id="Nome" required>
+                    <input type="text" name="Nome" class="form-control required" aria-hidden="true" id="Nome">
                 </div>
 
                 <div class="mb-3">
                     <label for="Cognome" class="form-label">Cognome</label>
-                    <input type="text" name="Cognome" class="form-control" id="Cognome" required>
+                    <input type="text" name="Cognome" class="form-control" id="Cognome">
                 </div>
 
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" name="Email" class="form-control" id="Email" required>
+                    <input type="email" name="Email" class="form-control" id="Email">
                 </div>
 
                 <div class="mb-3">
                     <label for="basic-url" class="form-label">Tipo di lavoro</label>
                     <select class="form-select" name="tipo_lavoro" id="tipo_lavoro">
-                        <option selected>Seleziona il tipo di lavoro</option>
+                        <option selected value="Nullo">Seleziona il tipo di lavoro</option>
                         <option value="Backed_Development">Backed Development</option>
                         <option value="Frontend_Development">Frontend Development</option>
                         <option value="Project_Analysis">Project Analysis</option>
@@ -74,10 +74,11 @@
                 </div>
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" name="Policy" id="Policy" required>
+                    <input class="form-check-input required" type="checkbox" name="Policy" id="Policy">
                     <label class="form-check-label" for="Policy">
                         Accetto la Privacy Policy
                     </label>
+                    <div class="invalid-feedback">CIAO</div>
                 </div>
 
                 <div class="d-flex flex-md-wrap text-center">
@@ -86,7 +87,7 @@
                     </div>
                     <div class="flex-fill align-self-center align-middle flex-wrap">
                         <p class="mb-0"><b>Prezzo finale</b></p>
-                        <p id="prezzoFinale">€</p>
+                        <p id="prezzoFinale"></p>
                     </div>
                 </div>
 
